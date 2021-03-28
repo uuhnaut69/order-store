@@ -25,18 +25,19 @@ public class RestaurantResource {
 
   @PostMapping
   @ResponseStatus(HttpStatus.CREATED)
-  public Restaurant create(@RequestBody @Valid RestaurantRequest restaurantRequest) {
+  public Restaurant createRestaurant(@RequestBody @Valid RestaurantRequest restaurantRequest) {
     return restaurantService.create(restaurantRequest);
   }
 
   @GetMapping
-  public List<Restaurant> findAll() {
+  public List<Restaurant> findAllRestaurants() {
     return restaurantService.findAll();
   }
 
   @PostMapping("/{restaurantId}")
   @ResponseStatus(HttpStatus.CREATED)
-  public Dish create(@PathVariable UUID restaurantId, @RequestBody @Valid DishRequest dishRequest) {
+  public Dish createDish(
+      @PathVariable UUID restaurantId, @RequestBody @Valid DishRequest dishRequest) {
     return dishService.create(restaurantId, dishRequest);
   }
 
