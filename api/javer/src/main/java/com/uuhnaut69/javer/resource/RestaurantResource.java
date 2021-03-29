@@ -34,14 +34,40 @@ public class RestaurantResource {
     return restaurantService.findAll();
   }
 
-  @PostMapping("/{restaurantId}")
+  @PutMapping("/{restaurantId}")
+  public Restaurant updateRestaurant(
+      @PathVariable UUID restaurantId, @RequestBody @Valid RestaurantRequest restaurantRequest) {
+    return restaurantService.update(restaurantId, restaurantRequest);
+  }
+
+  @DeleteMapping("/{restaurantId}")
+  @ResponseStatus(HttpStatus.NO_CONTENT)
+  public void deleteRestaurant(@PathVariable UUID restaurantId) {
+    restaurantService.delete(restaurantId);
+  }
+
+  @PostMapping("/{restaurantId}/dishes")
   @ResponseStatus(HttpStatus.CREATED)
   public Dish createDish(
       @PathVariable UUID restaurantId, @RequestBody @Valid DishRequest dishRequest) {
     return dishService.create(restaurantId, dishRequest);
   }
 
-  @GetMapping("/{restaurantId}")
+  @PutMapping("/{restaurantId}/dishes/{dishId}")
+  public Dish updateDish(
+      @PathVariable UUID restaurantId,
+      @PathVariable UUID dishId,
+      @RequestBody @Valid DishRequest dishRequest) {
+    return dishService.update(restaurantId, dishId, dishRequest);
+  }
+
+  @DeleteMapping("/{restaurantId}/dishes/{dishId}")
+  @ResponseStatus(HttpStatus.NO_CONTENT)
+  public void updateDish(@PathVariable UUID restaurantId, @PathVariable UUID dishId) {
+    dishService.delete(restaurantId, dishId);
+  }
+
+  @GetMapping("/{restaurantId}/dishes")
   public List<Dish> findAllByRestaurantId(@PathVariable UUID restaurantId) {
     return dishService.findAllByRestaurantId(restaurantId);
   }

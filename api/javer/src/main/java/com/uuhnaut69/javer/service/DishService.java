@@ -11,4 +11,8 @@ public interface DishService {
   List<Dish> findAllByRestaurantId(UUID restaurantId);
 
   Dish create(UUID restaurantId, DishRequest dishRequest);
+
+  Dish update(UUID restaurantId, UUID dishId, DishRequest dishRequest);
+
+  void delete(UUID restaurantId, UUID dishId);
 }
