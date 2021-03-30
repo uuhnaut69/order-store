@@ -1,0 +1,13 @@
+server:
+  port: 8787
+spring:
+  application:
+    name: kafka-streams
+  kafka:
+    bootstrap-servers: localhost:29092
+    consumer:
+      auto-commit-interval: 100
+topic:
+  dishes-input: postgres.public.dishes
+  restaurants-input: postgres.public.restaurants
+  enriched-restaurants-output: enriched.restaurants

@@ -13,5 +13,6 @@
 
     <modules>
         <module>spring-cloud-stream-aggregator</module>
+        <module>spring-kafka-stream</module>
     </modules>
 </project>
