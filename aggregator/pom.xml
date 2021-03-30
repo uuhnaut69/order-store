@@ -14,5 +14,6 @@
     <modules>
         <module>spring-cloud-streams-aggregator</module>
         <module>spring-kafka-streams-aggregator</module>
+        <module>kotlin-spring-kafka-streams-aggregator</module>
     </modules>
 </project>
