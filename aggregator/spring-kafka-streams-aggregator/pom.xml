@@ -11,7 +11,7 @@
     <groupId>com.uuhnaut69</groupId>
     <artifactId>spring-kafka-stream</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>spring-kafka-stream</name>
+    <name>spring-kafka-streams-aggregator</name>
     <description>Demo project for Spring Boot</description>
     <properties>
         <java.version>11</java.version>

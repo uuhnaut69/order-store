@@ -12,7 +12,7 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>spring-cloud-stream-aggregator</module>
-        <module>spring-kafka-stream</module>
+        <module>spring-cloud-streams-aggregator</module>
+        <module>spring-kafka-streams-aggregator</module>
     </modules>
 </project>
