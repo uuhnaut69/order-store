@@ -1,8 +1,6 @@
 server:
   port: 8787
 spring:
-  application:
-    name: kafka-streams
   kafka:
     bootstrap-servers: localhost:29092
     consumer:

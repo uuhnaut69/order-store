@@ -1,11 +1,8 @@
 server:
-  port: 8788
+  port: 8989
 spring:
-  application:
-    name: kotlin-kafka-streams
   kafka:
     bootstrap-servers: localhost:29092
-
 topic:
   dishes-input: postgres.public.dishes
   restaurants-input: postgres.public.restaurants
